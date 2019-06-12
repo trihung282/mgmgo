@@ -1,13 +1,97 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<html style="height: 100%;" lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <name>Title</name>
+    <title>Quote of date</title>
+    <style>
+        .container {
+            display: block;
+            justify-content: center;
+            justify-items: center;
+            width: 800px;
+            height: 500px;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        .content {
+            display: block;
+            width: 100%;
+            top: 90% !important;
+            padding: 5px 5px 5px 5px;
+        }
+        .center{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        #title {
+            text-align: center;
+            font-size: 26px;
+            text-transform: uppercase;
+            color: #16B6DF;
+            font-weight: bold;
+            font-family: 'Raleway', sans-serif;
+            display: block;
+        }
+
+        #quote {
+            text-align: center;
+            font-family: 'Lora', white;
+            font-size: 36px;
+            color: white;
+            line-height: 1.3em;
+            margin-bottom: 10px;
+            text-shadow: -1px 0 deepskyblue, 0 1px deepskyblue, 1px 0 deepskyblue, 0 -1px deepskyblue;
+        }
+
+        #image {
+            position: absolute;
+            z-index: -1;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<!--    <script type="text/javascript">-->
+<!--        $.ajax({-->
+<!--                url: 'https://quota.glitch.me/random',-->
+<!--                success: function (data) {-->
+<!--                    document.getElementById('quote').innerHTML = data.quoteText;-->
+<!--                    document.getElementById('title').innerText = data.quoteAuthor;-->
+
+<!--                    console.log(data);-->
+<!--                }-->
+<!--            }-->
+<!--        )-->
+<!--        $.ajax({-->
+<!--            url: 'https://picsum.photos/v2/list',-->
+<!--            success: function (data) {-->
+<!--                var index = Math.floor(Math.random() * data.length);-->
+<!--                document.getElementById('image').src = data[index].download_url;-->
+<!--                console.log(data[index].download_url);-->
+<!--            }-->
+<!--        })-->
+<!--    </script>-->
 </head>
 <body>
+<div class="col-md-12">
+    <div class="container center">
+        <img th:src="${quote.image}" id="image" width="800" height="500"/>
+        <div class="content center">
+            <div th:text="${quote.title}" id="quote"></div>
+            <div class="author">
+                <div th:text="${quote.author}" id="title"> Title</div>
+            </div>
+        </div>
+    </div>
+</div>
 
-Hello!
-
-</form>
 </body>
+
 </html>

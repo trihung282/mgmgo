@@ -5,7 +5,9 @@ package com.mgmtp.internship.experiences.model.tables;
 
 
 import com.mgmtp.internship.experiences.model.tables.tables.Place;
+import com.mgmtp.internship.experiences.model.tables.tables.Quote;
 import com.mgmtp.internship.experiences.model.tables.tables.records.PlaceRecord;
+import com.mgmtp.internship.experiences.model.tables.tables.records.QuoteRecord;
 
 import javax.annotation.Generated;
 
@@ -33,12 +35,14 @@ public class Keys {
     // -------------------------------------------------------------------------
 
     public static final Identity<PlaceRecord, Long> IDENTITY_PLACE = Identities0.IDENTITY_PLACE;
+    public static final Identity<QuoteRecord, Long> IDENTITY_QUOTE = Identities0.IDENTITY_QUOTE;
 
     // -------------------------------------------------------------------------
     // UNIQUE and PRIMARY KEY definitions
     // -------------------------------------------------------------------------
 
     public static final UniqueKey<PlaceRecord> PK_PLACE = UniqueKeys0.PK_PLACE;
+    public static final UniqueKey<QuoteRecord> PK_QUOTE = UniqueKeys0.PK_QUOTE;
 
     // -------------------------------------------------------------------------
     // FOREIGN KEY definitions
@@ -51,9 +55,11 @@ public class Keys {
 
     private static class Identities0 {
         public static Identity<PlaceRecord, Long> IDENTITY_PLACE = Internal.createIdentity(Place.PLACE, Place.PLACE.ID);
+        public static Identity<QuoteRecord, Long> IDENTITY_QUOTE = Internal.createIdentity(Quote.QUOTE, Quote.QUOTE.ID);
     }
 
     private static class UniqueKeys0 {
         public static final UniqueKey<PlaceRecord> PK_PLACE = Internal.createUniqueKey(Place.PLACE, "pk_place", Place.PLACE.ID);
+        public static final UniqueKey<QuoteRecord> PK_QUOTE = Internal.createUniqueKey(Quote.QUOTE, "pk_quote", Quote.QUOTE.ID);
     }
 }

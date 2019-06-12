@@ -5,6 +5,7 @@ package com.mgmtp.internship.experiences.model.tables;
 
 
 import com.mgmtp.internship.experiences.model.tables.tables.Place;
+import com.mgmtp.internship.experiences.model.tables.tables.Quote;
 
 import javax.annotation.Generated;
 
@@ -31,6 +32,7 @@ public class Indexes {
     // -------------------------------------------------------------------------
 
     public static final Index PK_PLACE = Indexes0.PK_PLACE;
+    public static final Index PK_QUOTE = Indexes0.PK_QUOTE;
 
     // -------------------------------------------------------------------------
     // [#1459] distribute members to avoid static initialisers > 64kb
@@ -38,5 +40,6 @@ public class Indexes {
 
     private static class Indexes0 {
         public static Index PK_PLACE = Internal.createIndex("pk_place", Place.PLACE, new OrderField[] { Place.PLACE.ID }, true);
+        public static Index PK_QUOTE = Internal.createIndex("pk_quote", Quote.QUOTE, new OrderField[] { Quote.QUOTE.ID }, true);
     }
 }
