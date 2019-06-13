@@ -5,6 +5,7 @@ package com.mgmtp.internship.experiences.model.tables;
 
 
 import com.mgmtp.internship.experiences.model.tables.tables.Place;
+import com.mgmtp.internship.experiences.model.tables.tables.Quote;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -31,7 +32,7 @@ import org.jooq.impl.SchemaImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Public extends SchemaImpl {
 
-    private static final long serialVersionUID = -1781083681;
+    private static final long serialVersionUID = 1938741670;
 
     /**
      * The reference instance of <code>public</code>
@@ -42,6 +43,11 @@ public class Public extends SchemaImpl {
      * place table
      */
     public final Place PLACE = com.mgmtp.internship.experiences.model.tables.tables.Place.PLACE;
+
+    /**
+     * quote table
+     */
+    public final Quote QUOTE = com.mgmtp.internship.experiences.model.tables.tables.Quote.QUOTE;
 
     /**
      * No further instances allowed
@@ -68,7 +74,8 @@ public class Public extends SchemaImpl {
 
     private final List<Sequence<?>> getSequences0() {
         return Arrays.<Sequence<?>>asList(
-            Sequences.PLACE_ID_SEQ);
+            Sequences.PLACE_ID_SEQ,
+            Sequences.QUOTE_ID_SEQ);
     }
 
     @Override
@@ -80,6 +87,7 @@ public class Public extends SchemaImpl {
 
     private final List<Table<?>> getTables0() {
         return Arrays.<Table<?>>asList(
-            Place.PLACE);
+            Place.PLACE,
+            Quote.QUOTE);
     }
 }

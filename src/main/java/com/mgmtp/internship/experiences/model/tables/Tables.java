@@ -5,6 +5,7 @@ package com.mgmtp.internship.experiences.model.tables;
 
 
 import com.mgmtp.internship.experiences.model.tables.tables.Place;
+import com.mgmtp.internship.experiences.model.tables.tables.Quote;
 
 import javax.annotation.Generated;
 
@@ -26,4 +27,9 @@ public class Tables {
      * place table
      */
     public static final Place PLACE = com.mgmtp.internship.experiences.model.tables.tables.Place.PLACE;
+
+    /**
+     * quote table
+     */
+    public static final Quote QUOTE = com.mgmtp.internship.experiences.model.tables.tables.Quote.QUOTE;
 }

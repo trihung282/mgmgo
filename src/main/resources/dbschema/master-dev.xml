@@ -7,5 +7,4 @@
 
     <include file="master.xml" relativeToChangelogFile="true"/>
     <include file="testdata/place_test.sql" relativeToChangelogFile="true"/>
-
 </databaseChangeLog>

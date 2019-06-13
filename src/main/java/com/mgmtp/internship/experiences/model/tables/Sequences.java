@@ -27,4 +27,9 @@ public class Sequences {
      * The sequence <code>public.place_id_seq</code>
      */
     public static final Sequence<Long> PLACE_ID_SEQ = new SequenceImpl<Long>("place_id_seq", Public.PUBLIC, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
+
+    /**
+     * The sequence <code>public.quote_id_seq</code>
+     */
+    public static final Sequence<Long> QUOTE_ID_SEQ = new SequenceImpl<Long>("quote_id_seq", Public.PUBLIC, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
 }
