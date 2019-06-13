@@ -53,7 +53,6 @@ public class QuoteServicelmpl implements QuoteService {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-
         //get random Image
         int index = (int) (Math.random()*listImage.size());
         JSONObject imageObject = (JSONObject) listImage.get(index);
